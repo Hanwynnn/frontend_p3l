@@ -102,7 +102,7 @@ export default {
 
       axios
         .post(
-          "https://gofitbackend.hanwyntugas.com/backend/public/api/transaksidepouang/",
+          "https://gofitbackend.hanwyntugas.com/backend/public/api/transaksidepouang",
           {
             ID_MEMBER: id_member,
             ID_PEGAWAI: id_pegawai,
