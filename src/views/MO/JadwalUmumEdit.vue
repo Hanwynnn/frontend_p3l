@@ -101,7 +101,7 @@ export default {
           jadwalumum.hari_kelas = response.data.data.HARI_KELAS;
           jadwalumum.id_kelas = response.data.data.ID_KELAS;
           jadwalumum.id_kelas = response.data.data.kelas.NAMA_KELAS;
-          console.log(jadwalumum.id_instruktur);
+          console.log(response.data.data);
         })
         .catch((error) => {
           console.log(error.response.data);
