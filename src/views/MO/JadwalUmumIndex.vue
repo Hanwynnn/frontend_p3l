@@ -30,7 +30,7 @@
             <td>{{ item.SESI_KELAS }}</td>
             <td>{{ item.HARI_KELAS }}</td>            
             <td>
-              <!-- <router-link
+              <router-link
                 :to="{
                   name: 'jadwalumum.edit',
                   params: { id: item.ID_JADWAL_UMUM },
@@ -38,13 +38,7 @@
                 class="btn btn-primary btn-sm"
               >
                 Edit
-              </router-link>
-              <button
-                @click.prevent="postDelete(item.ID_JADWAL_UMUM)"
-                class="btn btn-sm btn-danger ml-1"
-              >
-                DELETE
-              </button> -->
+              </router-link>              
             </td>
           </tr>
         </tbody>
