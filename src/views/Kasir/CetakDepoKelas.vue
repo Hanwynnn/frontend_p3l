@@ -23,7 +23,7 @@
       </p>
       <p><strong>Deposit (bayar {{ struk.totalDeposit }} gratis {{ struk.bonus }}): </strong>{{ formatUang(struk.totalHarga) }} ({{ struk.totalDeposit }} x {{ formatUang(struk.hargaKelas) }})</p>
       <p><strong>Jenis Kelas: </strong>{{ struk.kelas }}</p>
-      <p><strong>Total Deposit {{ struk.kelas }}: </strong>{{ struk.totalDeposit }}</p>
+      <p><strong>Total Deposit {{ struk.kelas }}: </strong>{{ struk.totalDeposit +  struk.bonus}}</p>
       <p><strong>Berlaku Sampai Dengan:</strong> {{ struk.masaBerlaku }}</p>
       <div class="row">
         <div class="col col-1"></div>
