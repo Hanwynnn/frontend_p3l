@@ -108,7 +108,7 @@ export default {
   mounted() {
     console.log(localStorage.getItem("token")),
       axios
-        .get("http://localhost:8000/api/kelas", {
+        .get("https://gofitbackend.hanwyntugas.com/backend/public/api/kelas", {
           headers: {
             Authorization: `Bearer ${localStorage.getItem("token")}`,
           },
@@ -117,7 +117,7 @@ export default {
           this.kelass = result.data.data;
         });
     axios
-      .get("http://localhost:8000/api/instruktur", {
+      .get("https://gofitbackend.hanwyntugas.com/backend/public/api/instruktur", {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
         },
@@ -150,7 +150,7 @@ export default {
       console.log(localStorage.getItem("token"));
       axios
         .post(
-          "http://localhost:8000/api/jadwalumum",
+          "https://gofitbackend.hanwyntugas.com/backend/public/api/jadwalumum",
           {
             ID_KELAS: id_kelas,
             ID_INSTRUKTUR: id_instruktur,

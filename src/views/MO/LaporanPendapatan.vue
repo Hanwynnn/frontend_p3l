@@ -134,7 +134,7 @@ export default {
         let formattedCount = count.toString().padStart(2, "0");
         let bulan = periode + "-" + formattedCount;
         axios
-          .get("http://localhost:8000/api/laporanAktivasi/" + bulan, {
+          .get("https://gofitbackend.hanwyntugas.com/backend/public/api/laporanAktivasi/" + bulan, {
             headers: {
               Authorization: "Bearer " + localStorage.getItem("token"),
             },
@@ -144,7 +144,7 @@ export default {
             total[i] = parseInt(total[i]) + parseInt(response.data.data);
           });
         axios
-          .get("http://localhost:8000/api/laporanDeposit/" + bulan, {
+          .get("https://gofitbackend.hanwyntugas.com/backend/public/api/laporanDeposit/" + bulan, {
             headers: {
               Authorization: "Bearer " + localStorage.getItem("token"),
             },
@@ -156,7 +156,7 @@ export default {
             // console.log("Dataset "+testData.datasets[0].data[i]);
           });
         axios
-          .get("http://localhost:8000/api/laporanDepositKelas/" + bulan, {
+          .get("https://gofitbackend.hanwyntugas.com/backend/public/api/laporanDepositKelas/" + bulan, {
             headers: {
               Authorization: "Bearer " + localStorage.getItem("token"),
             },

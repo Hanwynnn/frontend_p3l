@@ -132,7 +132,7 @@ export default {
 
     onMounted(() => {
       axios
-        .get("http://localhost:8000/api/member", {
+        .get("https://gofitbackend.hanwyntugas.com/backend/public/api/member", {
           headers: {
             Authorization: `Bearer ${localStorage.getItem("token")}`,
           },
@@ -158,7 +158,7 @@ export default {
         if (isExpired(members.value[i].TANGGAL_KADALUARSA)) {
           axios
             .put(
-              `http://localhost:8000/api/member/${members.value[i].ID_MEMBER}`,
+              `https://gofitbackend.hanwyntugas.com/backend/public/api/member/${members.value[i].ID_MEMBER}`,
               {
                 STATUS: "Tidak Aktif",
                 NAMA_MEMBER: members.value[i].NAMA_MEMBER,

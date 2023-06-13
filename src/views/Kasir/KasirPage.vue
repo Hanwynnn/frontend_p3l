@@ -74,7 +74,7 @@ export default {
   methods: {
     logout() {
       axios
-        .post("http://localhost:8000/api/logout")
+        .post("https://gofitbackend.hanwyntugas.com/backend/public/api/logout")
         .then(() => {
           localStorage.removeItem("token");
           localStorage.removeItem("role");

@@ -67,7 +67,7 @@ export default {
     onMounted(() => {
       //get API from Laravel Backend
       axios
-        .get("http://localhost:8000/api/presensigym", {
+        .get("https://gofitbackend.hanwyntugas.com/backend/public/api/presensigym", {
           headers: {
             Authorization: `Bearer ${localStorage.getItem("token")}`,
           },
@@ -87,7 +87,7 @@ export default {
     function update(id) {
       axios
         .put(
-          `http://localhost:8000/api/presensigym/${id}`,
+          `https://gofitbackend.hanwyntugas.com/backend/public/api/presensigym/${id}`,
           {},
           {
             headers: {

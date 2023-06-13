@@ -74,7 +74,7 @@ export default {
 
     onMounted(() => {
       axios
-        .get("http://localhost:8000/api/instruktur", {
+        .get("https://gofitbackend.hanwyntugas.com/backend/public/api/instruktur", {
           headers: {
             Authorization: "Bearer " + localStorage.getItem("token"),
           },

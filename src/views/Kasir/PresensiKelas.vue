@@ -99,7 +99,7 @@ export default {
     onMounted(() => {
       //get API from Laravel Backend
       axios
-        .get("http://localhost:8000/api/presensikelas", {
+        .get("https://gofitbackend.hanwyntugas.com/backend/public/api/presensikelas", {
           headers: {
             Authorization: `Bearer ${localStorage.getItem("token")}`,
           },

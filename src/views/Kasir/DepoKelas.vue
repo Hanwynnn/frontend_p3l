@@ -55,7 +55,7 @@ export default {
 
     onMounted(() => {
       axios
-        .get("http://localhost:8000/api/depokelas", {
+        .get("https://gofitbackend.hanwyntugas.com/backend/public/api/depokelas", {
           headers: {
             Authorization: `Bearer ${localStorage.getItem("token")}`,
           },

@@ -56,7 +56,7 @@ export default {
 
     onMounted(() => {
       axios
-        .get("http://localhost:8000/api/instruktur", {
+        .get("https://gofitbackend.hanwyntugas.com/backend/public/api/instruktur", {
           headers: {
             Authorization: `Bearer ${localStorage.getItem("token")}`,
           },
@@ -76,7 +76,7 @@ export default {
       for (let i = 0; i < instruktur.value.length; i++) {
         axios
           .put(
-            `http://localhost:8000/api/instruktur/${instruktur.value[i].ID_INSTRUKTUR}`,
+            `https://gofitbackend.hanwyntugas.com/backend/public/api/instruktur/${instruktur.value[i].ID_INSTRUKTUR}`,
             {
               JUMLAH_TELAT: 0,
               NAMA_INSTRUKTUR: instruktur.value[i].NAMA_INSTRUKTUR,

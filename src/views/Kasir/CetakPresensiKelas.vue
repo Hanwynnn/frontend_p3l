@@ -63,7 +63,7 @@ export default {
     onMounted(() => {
       //get API from Laravel Backend
       axios
-        .get("http://localhost:8000/api/presensikelas/" + route.params.id, {
+        .get("https://gofitbackend.hanwyntugas.com/backend/public/api/presensikelas/" + route.params.id, {
           headers: {
             Authorization: "Bearer " + localStorage.getItem("token"),
           },

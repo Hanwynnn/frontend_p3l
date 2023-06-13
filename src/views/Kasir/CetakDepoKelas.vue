@@ -71,7 +71,7 @@ export default {
       //get API from Laravel Backend
       axios
         .get(
-          "http://localhost:8000/api/transaksidepokelas/" + route.params.id,
+          "https://gofitbackend.hanwyntugas.com/backend/public/api/transaksidepokelas/" + route.params.id,
           {
             headers: {
               Authorization: "Bearer " + localStorage.getItem("token"),

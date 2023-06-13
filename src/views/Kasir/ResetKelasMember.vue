@@ -95,7 +95,7 @@ export default {
 
     onMounted(() => {
       axios
-        .get("http://localhost:8000/api/depokelas", {
+        .get("https://gofitbackend.hanwyntugas.com/backend/public/api/depokelas", {
           headers: {
             Authorization: `Bearer ${localStorage.getItem("token")}`,
           },
@@ -121,7 +121,7 @@ export default {
         if (isExpired(depoKelas.value[i].MASA_BERLAKU_DEPO)) {
           axios
             .put(
-              `http://localhost:8000/api/depokelas/${depoKelas.value[i].id_depo}`,
+              `https://gofitbackend.hanwyntugas.com/backend/public/api/depokelas/${depoKelas.value[i].id_depo}`,
               {
                 STATUS: "Tidak Aktif",
                 SISA_DEPOSIT: 0,

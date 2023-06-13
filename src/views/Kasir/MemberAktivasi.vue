@@ -81,7 +81,7 @@ export default {
 
     onMounted(() => {
       axios
-        .get("http://localhost:8000/api/member/" + route.params.id, {
+        .get("https://gofitbackend.hanwyntugas.com/backend/public/api/member/" + route.params.id, {
           headers: {
             Authorization: `Bearer ${localStorage.getItem("token")}`,
           },
@@ -107,7 +107,7 @@ export default {
 
       axios
         .post(
-          "http://localhost:8000/api/transaksiaktivasi/",
+          "https://gofitbackend.hanwyntugas.com/backend/public/api/transaksiaktivasi/",
           {
             ID_MEMBER: id_member,
             ID_PEGAWAI: id_pegawai,            

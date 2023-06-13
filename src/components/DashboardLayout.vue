@@ -91,7 +91,7 @@ export default {
       console.log(pegawai.password);
       // Mengirimkan data login ke server menggunakan Axios
       axios
-        .post("http://localhost:8000/api/login", {
+        .post("https://gofitbackend.hanwyntugas.com/backend/public/api/login", {
           NAMA_PEGAWAI: pegawai.nama_pegawai,
           password: pegawai.password,
         })

@@ -77,7 +77,7 @@ export default {
         let formattedCount = count.toString().padStart(2, "0");
         let bulan = tahun + "-"+ cariBulan.toString().padStart(2, "0") + "-" + formattedCount;
         axios
-          .get("http://localhost:8000/api/laporanGym/" + bulan, {
+          .get("https://gofitbackend.hanwyntugas.com/backend/public/api/laporanGym/" + bulan, {
             headers: {
               Authorization: "Bearer " + localStorage.getItem("token"),
             },

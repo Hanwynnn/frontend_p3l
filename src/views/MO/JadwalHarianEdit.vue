@@ -73,7 +73,7 @@ export default {
 
     onMounted(() => {
       axios
-        .get("http://localhost:8000/api/jadwalharian/" + route.params.id, {
+        .get("https://gofitbackend.hanwyntugas.com/backend/public/api/jadwalharian/" + route.params.id, {
           headers: {
             Authorization: `Bearer ${localStorage.getItem("token")}`,
           },
@@ -92,7 +92,7 @@ export default {
     onMounted(() => {
       //get API from Laravel Backend
       axios
-        .get("http://localhost:8000/api/instruktur", {
+        .get("https://gofitbackend.hanwyntugas.com/backend/public/api/instruktur", {
           headers: {
             Authorization: `Bearer ${localStorage.getItem("token")}`,
           },
@@ -110,7 +110,7 @@ export default {
     function update() {
       axios
         .put(
-          "http://localhost:8000/api/jadwalharian/" + route.params.id,
+          "https://gofitbackend.hanwyntugas.com/backend/public/api/jadwalharian/" + route.params.id,
           {
             ID_INSTRUKTUR: jadwalharian.id_instruktur,
             STATUS: jadwalharian.status,

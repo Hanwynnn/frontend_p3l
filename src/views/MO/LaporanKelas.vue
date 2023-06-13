@@ -88,7 +88,7 @@ export default {
     onMounted(() => {
       let bulan = tahun + "-"+ cariBulan.toString().padStart(2, "0")
       axios
-        .get("http://localhost:8000/api/laporanKelas/"+bulan, {
+        .get("https://gofitbackend.hanwyntugas.com/backend/public/api/laporanKelas/"+bulan, {
           headers: {
             Authorization: "Bearer " + localStorage.getItem("token"),
           },

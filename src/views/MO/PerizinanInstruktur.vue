@@ -64,7 +64,7 @@ export default {
     onMounted(() => {
       //get API from Laravel Backend
       axios
-        .get("http://localhost:8000/api/perizinaninstruktur", {
+        .get("https://gofitbackend.hanwyntugas.com/backend/public/api/perizinaninstruktur", {
           headers: {
             Authorization: `Bearer ${localStorage.getItem("token")}`,
           },
@@ -86,7 +86,7 @@ export default {
       if (cek) {
         axios
           .put(
-            "http://localhost:8000/api/perizinaninstruktur/" + id,
+            "https://gofitbackend.hanwyntugas.com/backend/public/api/perizinaninstruktur/" + id,
             {              
               STATUS : "Diterima",
               ID_JADWAL_HARIAN : idJadwalHarian
@@ -113,7 +113,7 @@ export default {
       if (cek) {
         axios
           .put(
-            "http://localhost:8000/api/perizinaninstruktur/" + id,
+            "https://gofitbackend.hanwyntugas.com/backend/public/api/perizinaninstruktur/" + id,
             {              
               STATUS : "Ditolak",
               ID_JADWAL_HARIAN : idJadwalHarian

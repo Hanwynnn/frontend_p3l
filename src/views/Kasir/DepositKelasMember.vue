@@ -90,7 +90,7 @@ export default {
 
   mounted() {
     axios
-      .get("http://localhost:8000/api/kelas", {
+      .get("https://gofitbackend.hanwyntugas.com/backend/public/api/kelas", {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
         },
@@ -117,7 +117,7 @@ export default {
 
     onMounted(() => {
       axios
-        .get("http://localhost:8000/api/member/" + route.params.id, {
+        .get("https://gofitbackend.hanwyntugas.com/backend/public/api/member/" + route.params.id, {
           headers: {
             Authorization: `Bearer ${localStorage.getItem("token")}`,
           },
@@ -136,7 +136,7 @@ export default {
 
       axios
         .post(
-          "http://localhost:8000/api/transaksidepokelas/",
+          "https://gofitbackend.hanwyntugas.com/backend/public/api/transaksidepokelas/",
           {
             ID_MEMBER: id_member,
             ID_PEGAWAI: id_pegawai,

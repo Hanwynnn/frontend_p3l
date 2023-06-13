@@ -50,7 +50,7 @@ export default {
     onMounted(() => {
       //get API from Laravel Backend
       axios
-        .get("http://localhost:8000/api/member", {
+        .get("https://gofitbackend.hanwyntugas.com/backend/public/api/member", {
           headers: {
             Authorization: `Bearer ${localStorage.getItem("token")}`,
           },
@@ -69,7 +69,7 @@ export default {
     onMounted(() => {
       //get API from Laravel Backend
       axios
-        .get("http://localhost:8000/api/transaksiaktivasi", {
+        .get("https://gofitbackend.hanwyntugas.com/backend/public/api/transaksiaktivasi", {
           headers: {
             Authorization: `Bearer ${localStorage.getItem("token")}`,
           },

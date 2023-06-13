@@ -68,7 +68,7 @@ export default {
     onMounted(() => {
       //get API from Laravel Backend
       axios
-        .get("http://localhost:8000/api/instruktur", {
+        .get("https://gofitbackend.hanwyntugas.com/backend/public/api/instruktur", {
           headers: {
             Authorization: `Bearer ${localStorage.getItem("token")}`,
           },
@@ -86,7 +86,7 @@ export default {
     function postDelete(id) {
       //delete data post by ID
       axios
-        .delete(`http://localhost:8000/api/instruktur/${id}`, {
+        .delete(`https://gofitbackend.hanwyntugas.com/backend/public/api/instruktur/${id}`, {
           headers: {
             Authorization: `Bearer ${localStorage.getItem("token")}`,
           },

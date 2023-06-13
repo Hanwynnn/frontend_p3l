@@ -151,7 +151,7 @@ export default {
       console.log(localStorage.getItem("token"));
       axios
         .post(
-          "http://localhost:8000/api/member",
+          "https://gofitbackend.hanwyntugas.com/backend/public/api/member",
           {
             NAMA_MEMBER: nama_member,
             TANGGAL_LAHIR_MEMBER: tanggal_lahir,

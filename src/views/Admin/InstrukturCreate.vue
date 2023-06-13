@@ -136,7 +136,7 @@ export default {
       console.log(localStorage.getItem("token"));
       axios
         .post(
-          "http://localhost:8000/api/instruktur",          
+          "https://gofitbackend.hanwyntugas.com/backend/public/api/instruktur",          
           {
             NAMA_INSTRUKTUR: nama_instruktur,
             TANGGAL_LAHIR_INSTRUKTUR: tanggal_lahir,
