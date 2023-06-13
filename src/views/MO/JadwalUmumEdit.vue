@@ -8,6 +8,26 @@
             <hr />
             <form @submit.prevent="update">
               <div class="form-group mb-3">
+                <label for="content" class="form-label">ID Jadwal Umum</label>
+                <input
+                  class="form-control"
+                  type="text"
+                  v-model="jadwalumum.id_jadwal"                  
+                  disabled
+                />
+              </div>
+
+              <div class="form-group mb-3">
+                <label for="content" class="form-label">Nama_Kelas</label>
+                <input
+                  class="form-control"
+                  type="text"
+                  v-model="jadwalumum.nama_kelas"                  
+                  disabled
+                />
+              </div>
+
+              <div class="form-group mb-3">
                 <label for="content" class="form-label">Instruktur</label>
                 <select
                   class="form-control"
@@ -50,16 +70,18 @@ import axios from "axios";
 export default {
   setup() {
     let instruktur = ref([]);
+    const validation = ref([]);
+    const router = useRouter();
+    const route = useRoute();
+
     const jadwalumum = reactive({
       id_instruktur: "",      
       id_kelas: "",
       sesi_kelas: "",
       hari_kelas: "",
+      nama_kelas: "",
+      id_jadwal: route.params.id,
     });
-
-    const validation = ref([]);
-    const router = useRouter();
-    const route = useRoute();
 
     onMounted(() => {
       axios
@@ -78,6 +100,7 @@ export default {
           jadwalumum.sesi_kelas = response.data.data.SESI_KELAS;
           jadwalumum.hari_kelas = response.data.data.HARI_KELAS;
           jadwalumum.id_kelas = response.data.data.ID_KELAS;
+          jadwalumum.id_kelas = response.data.data.kelas.NAMA_KELAS;
           console.log(jadwalumum.id_instruktur);
         })
         .catch((error) => {
