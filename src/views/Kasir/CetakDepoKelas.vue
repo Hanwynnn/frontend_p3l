@@ -23,7 +23,7 @@
       </p>
       <p><strong>Deposit (bayar {{ struk.totalDeposit }} gratis {{ struk.bonus }}): </strong>{{ formatUang(struk.totalHarga) }} ({{ struk.totalDeposit }} x {{ formatUang(struk.hargaKelas) }})</p>
       <p><strong>Jenis Kelas: </strong>{{ struk.kelas }}</p>
-      <p><strong>Total Deposit {{ struk.kelas }}: </strong>{{ struk.totalDeposit +  struk.bonus}}</p>
+      <p><strong>Total Deposit {{ struk.kelas }}: </strong>{{ struk.totalPaket}}</p>
       <p><strong>Berlaku Sampai Dengan:</strong> {{ struk.masaBerlaku }}</p>
       <div class="row">
         <div class="col col-1"></div>
@@ -63,6 +63,7 @@ export default {
       bonus:"",
       hargaKelas: "",
       totalHarga: "",
+      totalPaket: "",
     });
 
     const route = useRoute();
@@ -92,6 +93,7 @@ export default {
           struk.bonus = response.data.data[0].BONUS;
           struk.totalHarga = response.data.data[0].TOTAL_HARGA;
           struk.hargaKelas = response.data.data[0].kelas.HARGA_KELAS;
+          struk.totalPaket = struk.totalDeposit + struk.bonus;
           struk.idKasir = localStorage.getItem("id");
           struk.kasir = localStorage.getItem("nama");
           console.log(struk.kasir);
