@@ -93,7 +93,7 @@ export default {
           struk.bonus = response.data.data[0].BONUS;
           struk.totalHarga = response.data.data[0].TOTAL_HARGA;
           struk.hargaKelas = response.data.data[0].kelas.HARGA_KELAS;
-          struk.totalPaket = struk.totalDeposit + struk.bonus;
+          struk.totalPaket = parseInt(struk.totalDeposit) + parseInt(struk.bonus);
           struk.idKasir = localStorage.getItem("id");
           struk.kasir = localStorage.getItem("nama");
           console.log(struk.kasir);
