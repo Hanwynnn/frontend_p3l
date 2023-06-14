@@ -163,7 +163,7 @@ export default {
             },
           })
           .then((response) => {
-            pendapatanDeposit[i] = response.data.data;
+            pendapatanDeposit[i] = parseInt(pendapatanDeposit[i]) + parseInt(response.data.data);
             total[i] = parseInt(total[i]) + parseInt(response.data.data);
             // testData.datasets[0].data[i] = total[i]
             // console.log("Dataset "+testData.datasets[0].data[i]);
