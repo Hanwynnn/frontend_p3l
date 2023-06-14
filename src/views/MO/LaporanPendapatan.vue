@@ -131,6 +131,7 @@ export default {
     onMounted(() => {
       let count = 1;
       for (let i = 0; i < 12; i++) {
+        total[i] = 0;
         let formattedCount = count.toString().padStart(2, "0");
         let bulan = periode + "-" + formattedCount;
         axios
