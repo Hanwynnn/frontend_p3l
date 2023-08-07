@@ -118,7 +118,7 @@ export default {
           }
         })
         .catch((error) => {
-          validation.value = error.response.data;
+          validation.value = error.response;
           console.log(validation.value);
           if (validation.value.message == "invalid credentials") {
             alert("Username atau Password salah");
